@@ -239,7 +239,12 @@
             document.querySelectorAll(".nav-link").forEach(element => {
                 element.classList.remove("text-dark")
                 element.classList.add("text-white")
-                element.style.borderBottom = "1px solid white"
+                element.addEventListener("mouseenter", ()=>{
+                    element.style.borderBottom = "1px solid white"
+                })
+                element.addEventListener("mouseout", ()=>{
+                    element.style.borderBottom = "none"
+                })
             });
             document.querySelectorAll("h1").forEach(element => {
                 element.classList.remove("text-dark")
